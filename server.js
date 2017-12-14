@@ -44,6 +44,7 @@ app.use(compression());
 /* LOAD ALL ROUTERS
 ----------------------------------------- */
 const indexRouter = require('./routes/index');
+const accountRouter = require('./routes/account');
 
 /* MIDDLEWARE FOR THE VIEW ENGINE
 ----------------------------------------- */
@@ -59,6 +60,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 ----------------------------------------- */
 app.use(express.static('public')); // For server static files
 app.use('/', indexRouter);
+app.use('/account', accountRouter);
 
 /* 404 PAGE
 ----------------------------------------- */
