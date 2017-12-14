@@ -64,7 +64,7 @@ app.use('/', indexRouter);
 ----------------------------------------- */
 app.enable('verbose errors');
 app.use(function(req, res, next) {
-  res.render('error/404');
+  res.render('errors/404');
 });
 
 /* START THE NPM SERVER
