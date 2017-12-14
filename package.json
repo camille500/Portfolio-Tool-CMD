@@ -1,0 +1,20 @@
+{
+  "name": "cmd-portfolio-tool",
+  "version": "1.0.0",
+  "description": "Tool for creating portfolio for CMD students",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camille500/Portfolio-Tool-CMD.git"
+  },
+  "author": "Camille Sébastien Niessen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camille500/Portfolio-Tool-CMD/issues"
+  },
+  "homepage": "https://github.com/camille500/Portfolio-Tool-CMD#readme"
+}
