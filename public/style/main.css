@@ -3,6 +3,12 @@
 body {
   font-family: 'Open Sans', sans-serif; }
 
+.__login .__errorMessage {
+  max-width: 40em; }
+
+.__register .__errorMessage {
+  max-width: 40em; }
+
 .__accountForm {
   max-width: 22.5em; }
   .__accountForm .__manditory {

@@ -1,9 +1,15 @@
 <%- include('../partials/head.ejs') %>
 
-  <main class="__login container-fluid">
+  <main class="__register container-fluid">
 
     <h1>Nieuw account aanmaken</h1>
     <p class="__infoText">Je kunt alleen een account aanmaken met je HvA e-mailadres</p>
+
+    <% if(error != false) { %>
+      <div class="alert alert-danger __errorMessage" role="alert">
+        <strong>Aanmelding mislukt!</strong> Het opgegeven e-mailadres is al geregistreerd.
+      </div>
+    <% } %>
 
     <form class="__accountForm" method="post">
       <div class="form-group">

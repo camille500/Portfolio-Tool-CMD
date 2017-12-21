@@ -8,25 +8,27 @@ const account = require('../modules/account');
 /* RENDER THE LOGIN PAGE
 ----------------------------------------- */
 router.get('/login', function(req, res, next) {
+  res.locals.error = false;
   res.render('account/login');
 });
 
 /* HANDLE POSTED LOGIN DATA IN ACCOUNT MODULE
 ----------------------------------------- */
 router.post('/login', account.login, function(req, res, next) {
-  // Handle login
+  res.redirect('/dashboard')
 });
 
 /* RENDER THE REGISTER PAGE
 ----------------------------------------- */
 router.get('/register', function(req, res, next) {
+  res.locals.error = false;
   res.render('account/register');
 });
 
 /* HANDLE POSTED REGISTER DATA IN ACCOUNT MODULE
 ----------------------------------------- */
 router.post('/register', account.register, function(req, res, next) {
-  // Handle registering
+  res.redirect('/account/login');
 });
 
 /* DESTROY SESSION AND REDIRECT
