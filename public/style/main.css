@@ -1,0 +1,9 @@
+/* MAIN SCSS FILE, LOAD ALL NEEDED FILES FOR COMPILING
+----------------------------------------- */
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.__accountForm {
+  max-width: 22.5em; }
+  .__accountForm .__manditory {
+    color: #e74c3c; }
