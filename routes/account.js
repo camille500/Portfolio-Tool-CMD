@@ -34,7 +34,7 @@ router.post('/register', account.register, function(req, res, next) {
 /* DESTROY SESSION AND REDIRECT
 ----------------------------------------- */
 router.get('/logout', account.logout, function(req, res, next) {
-  // Handle logout
+  res.redirect('/account/login');
 });
 
 /* EXPORT ROUTER

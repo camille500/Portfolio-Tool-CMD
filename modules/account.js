@@ -21,7 +21,6 @@ const account = {
         res.render('account/login');
       }
     })
-    next();
   },
   register(req, res, next) {
     const userCollection = db.collection('users');
