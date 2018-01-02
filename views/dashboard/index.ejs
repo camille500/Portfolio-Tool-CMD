@@ -4,6 +4,38 @@
 
     <h1>Hi <%=user.firstname%></h1>
 
+    <% if(user.template == false) { %>
+      <h2>Je hebt nog geen template gekozen</h2>
+      <p>Op dit moment zijn er twee standaard templates waar je uit kunt kiezen.</p>
+      <p>In de stappen na het kiezen ga je aan de slag met het invullen van de template met al jouw projecten en gegevens.</p>
+      <p>Probeer uiteindelijk ook nog wat eigen JavaScript en CSS toe te voegen om het geheel persoonlijker te maken!</p>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <img class="card-img-top" src="./images/template1.png" alt="Template 1">
+            <div class="card-body">
+              <h5 class="card-title">Template 1</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Preview</a>
+              <a href="#" class="btn btn-primary">Kies template</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img class="card-img-top" src="./images/template2.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Template 2</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Preview</a>
+              <a href="#" class="btn btn-primary">Kies template</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } %>
+
     <a href="/account/logout" class="__button btn btn-danger">Uitloggen</a>
 
   </main>

@@ -13,3 +13,12 @@ body {
   max-width: 22.5em; }
   .__accountForm .__manditory {
     color: #e74c3c; }
+
+.__dashboard p {
+  margin-bottom: .55em; }
+
+.__dashboard h2 {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin: 1em 0 .75em;
+  color: #4a4a4a; }

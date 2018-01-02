@@ -23,12 +23,16 @@ const account = {
     })
   },
   register(req, res, next) {
+    const date = new Date();
+    const id = (Number(date.getFullYear() + '' + date.getMonth() + '' + date.getDate())) * (Math.floor((Math.random() * 1993) + 1));
     const userCollection = db.collection('users');
     const registerData = {
       mail: req.body.mail.toLowerCase(),
       password: passwordHash.generate(req.body.password),
       firstname: req.body.firstname,
-      lastname: req.body.lastname
+      lastname: req.body.lastname,
+      template: false,
+      portfolio_id: id
     };
     userCollection.findOne({'mail': registerData.mail}, function(error, results) {
       if(!results || results == null) {
