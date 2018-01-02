@@ -46,6 +46,7 @@ app.use(compression());
 const indexRouter = require('./routes/index');
 const accountRouter = require('./routes/account');
 const dashboardRouter = require('./routes/dashboard');
+const portfolioRouter = require('./routes/portfolio');
 
 /* MIDDLEWARE FOR THE VIEW ENGINE
 ----------------------------------------- */
@@ -63,6 +64,7 @@ app.use(express.static('public')); // For server static files
 app.use('/', indexRouter);
 app.use('/account', accountRouter);
 app.use('/dashboard', dashboardRouter);
+app.use('/portfolio', portfolioRouter);
 
 /* 404 PAGE
 ----------------------------------------- */

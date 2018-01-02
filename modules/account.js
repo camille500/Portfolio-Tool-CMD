@@ -32,7 +32,8 @@ const account = {
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       template: false,
-      portfolio_id: id
+      portfolio_id: id,
+      step: 0
     };
     userCollection.findOne({'mail': registerData.mail}, function(error, results) {
       if(!results || results == null) {

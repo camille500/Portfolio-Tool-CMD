@@ -5,35 +5,38 @@
     <h1>Hi <%=user.firstname%></h1>
 
     <% if(user.template == false) { %>
-      <h2>Je hebt nog geen template gekozen</h2>
+      <h2>Stap 1: Template kiezen</h2>
       <p>Op dit moment zijn er twee standaard templates waar je uit kunt kiezen.</p>
       <p>In de stappen na het kiezen ga je aan de slag met het invullen van de template met al jouw projecten en gegevens.</p>
       <p>Probeer uiteindelijk ook nog wat eigen JavaScript en CSS toe te voegen om het geheel persoonlijker te maken!</p>
 
       <div class="row">
-        <div class="col-sm-3">
-          <div class="card">
-            <img class="card-img-top" src="./images/template1.png" alt="Template 1">
-            <div class="card-body">
-              <h5 class="card-title">Template 1</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Preview</a>
-              <a href="#" class="btn btn-primary">Kies template</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <img class="card-img-top" src="./images/template2.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Template 2</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Preview</a>
-              <a href="#" class="btn btn-primary">Kies template</a>
-            </div>
-          </div>
+        <div class="col-sm-3 __template_1_preview">
+          <img src="./images/template1.png" class="img-fluid mbtm" />
+          <a href="/templates/1" target="_blank" class="__button btn btn-primary">Preview</a>
+          <a href="/portfolio/template/set/1" class="__button btn btn-primary">Kies deze template</a>
         </div>
       </div>
+    <% } %>
+
+    <% if(user.step == 1) { %>
+      <h2>Stap 2: Jouw gegevens invoeren</h2>
+      <p><strong>We beginnen nu met het vullen van het portfolio met jouw eigen gegevens.</strong></p>
+      <form>
+        <div class="form-group">
+          <label for="name">Naam</label>
+          <input type="text" class="form-control" id="name" value="<%=user.firstname%> <%=user.lastname%>" placeholder="Vul je naam in" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">E-mailadres</label>
+          <input type="mail" class="form-control" id="mail" value="<%=user.mail%>" required disabled>
+        </div>
+        <div class="form-group">
+          <label for="about">Over mij tekst</label>
+          <textarea class="form-control" id="about" rows="4" placeholder="Schrijf hier iets over jezelf"></textarea>        
+        </div>
+        <button type="submit" class="btn btn-primary">Verstuur</button>
+      </form>
     <% } %>
 
     <a href="/account/logout" class="__button btn btn-danger">Uitloggen</a>

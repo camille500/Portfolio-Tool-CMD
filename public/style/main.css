@@ -1,13 +1,25 @@
 /* MAIN SCSS FILE, LOAD ALL NEEDED FILES FOR COMPILING
 ----------------------------------------- */
 body {
+  background-color: #e7e7e7;
   font-family: 'Open Sans', sans-serif; }
+
+.mbtm {
+  margin-bottom: 1em; }
 
 .__login .__errorMessage {
   max-width: 40em; }
 
 .__register .__errorMessage {
   max-width: 40em; }
+
+.__dashboard .__template_1_preview {
+  margin-bottom: 5em;
+  text-align: center; }
+
+.__dashboard form {
+  width: 30em;
+  margin: 2em 0; }
 
 .__accountForm {
   max-width: 22.5em; }
