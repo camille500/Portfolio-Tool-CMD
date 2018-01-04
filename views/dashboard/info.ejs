@@ -1,0 +1,34 @@
+<%- include('../partials/head.ejs') %>
+
+  <main class="__dashboard container-fluid">
+
+    <h1>Hi <%=user.firstname%></h1>
+
+    <h2>Gegevens beheren</h2>
+      <p>We beginnen nu met het vullen van het portfolio met jouw eigen gegevens.</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Naam</label>
+          <input type="text" class="form-control" id="name" value="<%=user.firstname%> <%=user.lastname%>" placeholder="Vul je naam in" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">E-mailadres</label>
+          <input type="mail" class="form-control" id="mail" value="<%=user.mail%>" required disabled>
+        </div>
+        <div class="form-group">
+          <label for="about">Over mij tekst</label>
+          <textarea class="form-control" id="about" rows="4" placeholder="Schrijf hier iets over jezelf"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="name">Linkedin adres</label>
+          <input type="text" class="form-control" id="name" value="http://" placeholder="Voer je Linkedin adres in">
+        </div>
+        <button type="submit" class="btn btn-primary">Verstuur</button>
+      </form>
+    <% } %>
+
+    <a href="/account/logout" class="__button btn btn-danger">Uitloggen</a>
+
+  </main>
+
+<%- include('../partials/foot.ejs') %>

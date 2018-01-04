@@ -4,9 +4,9 @@ const portfolio = {
     const id = req.params.id;
     const user = req.session.user;
     userCollection.findOne({'mail': user.mail}, function(error, results) {
-      const updatedData = { template: '1', step: 1 };
+      const updatedData = { template: '1' };
       userCollection.update({mail: user.mail}, {$set: updatedData});
-      req.session.user.step = 1;
+      req.session.user.template = true;
       next();
     });
   },

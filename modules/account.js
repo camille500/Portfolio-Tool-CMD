@@ -31,9 +31,15 @@ const account = {
       password: passwordHash.generate(req.body.password),
       firstname: req.body.firstname,
       lastname: req.body.lastname,
+      about: '',
+      linkedin: '',
+      skills: '',
+      picture: '',
       template: false,
+      information: false,
+      projects: false,
+      styling: false,
       portfolio_id: id,
-      step: 0
     };
     userCollection.findOne({'mail': registerData.mail}, function(error, results) {
       if(!results || results == null) {
@@ -51,6 +57,7 @@ const account = {
   },
   checkSession(req, res, next) {
     if(req.session.loggedin == true) {
+      res.locals.user = req.session.user;
       next();
     } else {
       res.redirect('/account/login');
