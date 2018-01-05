@@ -10,6 +10,10 @@ const portfolio = {
       next();
     });
   },
+  saveInformation(req, res, next) {
+    const userCollection = db.collection('users');
+    console.log(req.session.user);
+  }
 };
 
 module.exports = portfolio;
