@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 const account = require('../modules/account');
+const portfolio = require('../modules/portfolio');
 
 /* RENDER THE DASHBOARD PAGE
 ----------------------------------------- */

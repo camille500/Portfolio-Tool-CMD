@@ -12,6 +12,10 @@ router.get('/template/set/:id', account.checkSession, portfolio.setTemplate, fun
   res.redirect('/dashboard');
 });
 
+router.get('/template/unset/:id', account.checkSession, portfolio.unsetTemplate, function(req, res, next) {
+  res.redirect('/dashboard/template');
+});
+
 /* EXPORT ROUTER
 ----------------------------------------- */
 module.exports = router;

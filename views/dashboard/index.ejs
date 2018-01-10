@@ -7,13 +7,12 @@
     <% if(user.template == false) { %>
       <p>Je hebt nog geen template gekozen</p>
       <a href="/dashboard/template" class="__button btn btn-primary">Kies een template</a>
-    <% } else if(user.template == true) { %>
-      <p>Je hebt al een template gekozen</p>
+    <% } else if(user.template == true && user.information == false) { %>
+      <p>Je hebt al een template gekozen, <a href="/dashboard/template">klik hier om deze te wijzigen</a>.</p>
+      <h2>Informatie invullen</h2>
+      <p>Bij de volgende stap ga je de informatie voor je portfolio invullen.</p>
+      <a href="/dashboard/information" class="__button btn btn-primary">Informatie invullen</a>
     <% } %>
-
-
-
-    <a href="/account/logout" class="__button btn btn-danger">Uitloggen</a>
 
   </main>
 

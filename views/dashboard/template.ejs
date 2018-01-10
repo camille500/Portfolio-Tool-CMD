@@ -17,9 +17,16 @@
           <a href="/portfolio/template/set/1" class="__button btn btn-primary">Kies deze template</a>
         </div>
       </div>
-    <% } %>
+    <% } else { %>
+      <h2>Je hebt gekozen voor template <%= user.template %></h2>
 
-    <a href="/account/logout" class="__button btn btn-danger">Uitloggen</a>
+      <div class="row">
+        <div class="col-sm-3 __template_1_preview">
+          <img src="../images/template1.png" class="img-fluid mbtm" />
+          <a href="/portfolio/template/unset/1" class="__button btn btn-primary">Verander template</a>
+        </div>
+      </div>
+    <% } %>
 
   </main>
 

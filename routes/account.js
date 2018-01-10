@@ -9,6 +9,7 @@ const account = require('../modules/account');
 ----------------------------------------- */
 router.get('/login', function(req, res, next) {
   res.locals.error = false;
+  res.locals.user = false;
   res.render('account/login');
 });
 

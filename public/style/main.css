@@ -21,6 +21,9 @@ body {
   width: 30em;
   margin: 2em 0; }
 
+.__foot {
+  margin-top: 3.5em; }
+
 .__accountForm {
   max-width: 22.5em; }
   .__accountForm .__manditory {
