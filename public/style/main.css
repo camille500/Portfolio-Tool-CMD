@@ -7,6 +7,9 @@ body {
 .mbtm {
   margin-bottom: 1em; }
 
+.btn_projects {
+  margin-top: 1.5em; }
+
 .__login .__errorMessage {
   max-width: 40em; }
 

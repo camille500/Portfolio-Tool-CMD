@@ -2,7 +2,31 @@
 
   <main class="__dashboard container-fluid">
 
-    <h1>Projecten overzicht</h1>
+    <h1>Hi <%=user.firstname%></h1>
+
+    <p>Op deze pagina kun je al jouw projecten beheren en nieuwe toevoegen</p>
+
+    <h2>Jouw projecten</h2>
+
+    <% if(projects.length == 0) { %>
+      <p>Je hebt nog geen projecten aangemaakt.</p>
+      <a href="/dashboard/projects/add" class="__button btn btn-primary">Maak je eerste project</a>
+    <% } else { %>
+
+    <div class="card-deck">
+      <% projects.forEach(function(project) { %>
+        <div class="card col-sm-3">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= project.name %></h5>
+            <p class="card-text"><%= project.description %></p>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+    <a href="/dashboard/projects/add" class="__button btn_projects btn btn-primary">Project toevoegen</a>
+
+    <% } %>
 
   </main>
 

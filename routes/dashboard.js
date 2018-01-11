@@ -26,9 +26,16 @@ router.post('/information', account.checkSession, portfolio.saveInformation, fun
 
 /* RENDER THE PROJECT PAGES
 ----------------------------------------- */
-router.get('/projects/overview', account.checkSession, function(req, res, next) {
+router.get('/projects/overview', account.checkSession, portfolio.getProjects, function(req, res, next) {
   res.render('dashboard/projects/overview');
 });
+
+/* RENDER THE PREVIEW PAGE
+----------------------------------------- */
+router.get('/preview/:template', account.checkSession, function(req, res, next) {
+  res.render('preview/' + req.params.template + '/index');
+});
+
 
 /* EXPORT ROUTER
 ----------------------------------------- */
