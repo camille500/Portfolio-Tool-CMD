@@ -20,8 +20,14 @@ router.get('/information', account.checkSession, function(req, res, next) {
   res.render('dashboard/info');
 });
 
-router.post('/information', portfolio.saveInformation, function(req, res, next) {
-  res.render('dashboard/info');
+router.post('/information', account.checkSession, portfolio.saveInformation, function(req, res, next) {
+  res.redirect('/dashboard');
+});
+
+/* RENDER THE PROJECT PAGES
+----------------------------------------- */
+router.get('/projects/overview', account.checkSession, function(req, res, next) {
+  res.render('dashboard/projects/overview');
 });
 
 /* EXPORT ROUTER

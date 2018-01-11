@@ -4,3 +4,13 @@
     color: $color-red;
   }
 }
+
+.__dashboard {
+  label {
+    font-weight: 700;
+  }
+  .subtext {
+    font-size: .85em;
+    color: grey;
+  }
+}

@@ -12,6 +12,12 @@
       <h2>Informatie invullen</h2>
       <p>Bij de volgende stap ga je de informatie voor je portfolio invullen.</p>
       <a href="/dashboard/information" class="__button btn btn-primary">Informatie invullen</a>
+    <% } else if(user.template == true && user.information == true) { %>
+      <p>Je hebt al een template gekozen, <a href="/dashboard/template">klik hier om deze te wijzigen</a>.</p>
+      <p>Je hebt alle informatie al ingevuld, <a href="/dashboard/information">klik hier om deze te wijzigen</a>.</p>
+      <h2>Projecten</h2>
+      <p>Bij de volgende stap ga je jouw projecten toevoegen</p>
+      <a href="/dashboard/projects/overview" class="__button btn btn-primary">Projecten toevoegen</a>
     <% } %>
 
   </main>

@@ -7,7 +7,7 @@
   color: #555;
   vertical-align: middle;
   border-radius: 4px;
-  max-width: 100%;
+  min-width: 100%;
   line-height: 22px;
   cursor: text;
 }
@@ -16,10 +16,10 @@
   box-shadow: none;
   outline: none;
   background-color: transparent;
-  padding: 0 6px;
+  padding: .5rem .75rem;
   margin: 0;
-  width: auto;
-  max-width: inherit;
+  max-width: 100%;
+  /* max-width: inherit; */
 }
 .bootstrap-tagsinput.form-control input::-moz-placeholder {
   color: #777;

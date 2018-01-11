@@ -29,6 +29,13 @@ body {
   .__accountForm .__manditory {
     color: #e74c3c; }
 
+.__dashboard label {
+  font-weight: 700; }
+
+.__dashboard .subtext {
+  font-size: .85em;
+  color: grey; }
+
 .__dashboard p {
   margin-bottom: .55em; }
 

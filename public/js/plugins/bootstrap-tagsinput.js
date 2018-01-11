@@ -29,6 +29,13 @@
     allowDuplicates: false
   };
 
+  document.body.addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { 
+      e.preventDefault();
+    }
+  });
+
   /**
    * Constructor function
    */
@@ -131,7 +138,7 @@
 
       // add a tag element
 
-      var $tag = $('<span class="tag ' + htmlEncode(tagClass) + (itemTitle !== null ? ('" title="' + itemTitle) : '') + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></span>');
+      var $tag = $('<span class="tag badge badge-pill badge-primary ' + htmlEncode(tagClass) + (itemTitle !== null ? ('" title="' + itemTitle) : '') + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></span>');
       $tag.data('item', item);
       self.findInputWrapper().before($tag);
       $tag.after(' ');
