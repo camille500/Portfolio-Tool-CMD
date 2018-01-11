@@ -8,15 +8,15 @@
       <p>We beginnen nu met het vullen van het portfolio met jouw eigen gegevens.</p>
       <form method="post">
         <div class="form-group">
-          <label for="name">Naam</label>
+          <label for="name">Naam*</label>
           <input type="text" class="form-control" id="name" name="name" value="<%=user.firstname%> <%=user.lastname%>" placeholder="Vul je naam in" required>
         </div>
         <div class="form-group">
-          <label for="mail">E-mailadres</label>
+          <label for="mail">E-mailadres*</label>
           <input type="mail" class="form-control" id="mail" name="mail" value="<%=user.mail%>" required disabled>
         </div>
         <div class="form-group">
-          <label for="about">Over mij tekst</label>
+          <label for="about">Over mij tekst*</label>
           <textarea class="form-control" id="about" name="about" rows="4" value="<%=user.about%>" placeholder="Schrijf hier iets over jezelf"></textarea>
         </div>
         <div class="form-group">
@@ -24,9 +24,21 @@
           <input type="text" class="form-control" id="linkedin" name="linkedin" value="<%=user.linkedin%>" placeholder="Voer je Linkedin adres in">
         </div>
         <div class="form-group">
-          <label for="skills">Skills</label><br/>
+          <label for="skills">Skills*</label><br/>
           <p class="subtext">Vul hier je skills in, bijvoorbeeld programmeertalen die je beheerst.</p>
-          <input type="text" data-role="tagsinput" name="skills" value="<%=user.skills%>" class="form-control" id="skills">
+          <input type="text" data-role="tagsinput" name="skills" value="<%=user.skills%>" class="form-control" id="skills" required>
+        </div>
+        <div class="form-group">
+          <label for="street">Straat en huisnummer</label>
+          <input type="text" class="form-control" id="street" name="street" value="<%=user.street%>" placeholder="Vul je straatnaam en huisnummer in">
+        </div>
+        <div class="form-group">
+          <label for="postalcode">Postcode</label>
+          <input type="text" class="form-control" id="postalcode" name="postalcode" value="<%=user.postalcode%>" placeholder="ABCD12">
+        </div>
+        <div class="form-group">
+          <label for="city">Woonplaats*</label>
+          <input type="text" class="form-control" id="city" name="city" value="<%=user.city%>" placeholder="Voer je woonplaats in" required>
         </div>
         <div class="form-group">
           <label for="picture">Foto</label>

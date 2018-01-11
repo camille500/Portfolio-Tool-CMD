@@ -27,6 +27,11 @@ body {
 .__foot {
   margin-top: 3.5em; }
 
+.__project_card {
+  max-width: 33%; }
+  .__project_card img {
+    max-width: 100%; }
+
 .__accountForm {
   max-width: 22.5em; }
   .__accountForm .__manditory {

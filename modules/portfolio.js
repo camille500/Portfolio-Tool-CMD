@@ -46,8 +46,12 @@ const portfolio = {
       user.linkedin = req.body.linkedin;
       user.skills = req.body.skills;
       user.picture = '';
+      user.street = req.body.street;
+      user.postalcode = req.body.postalcode;
+      user.city = req.body.city;
       user.information = true;
       req.session.user = user;
+      req.session.user.skills = req.body.skills.split(',');
       userCollection.update({ mail: user.mail }, { $set: user });
       next();
     });
@@ -66,6 +70,20 @@ const portfolio = {
         next();
       }, 1000)
     });
+  },
+  saveProject(req, res, next) {
+    const projectCollection = db.collection('projects');
+    const user = req.session.user;
+    const projectData = {
+      for: req.session.user.portfolio_id,
+      name: req.body.title,
+      description: req.body.description,
+      fulldescription: req.body.fulldescription,
+      skills: req.body.skills,
+      picture: ''
+    };
+    projectCollection.save(projectData);
+    next();
   }
 };
 

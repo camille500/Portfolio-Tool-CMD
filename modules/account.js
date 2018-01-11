@@ -11,6 +11,9 @@ const account = {
         if(passwordCheck == true) {
           req.session.loggedin = true;
           req.session.user = results;
+          if(typeof results.skills != 'array') {
+            req.session.user.skills = results.skills.split(',');
+          }
           next();
         } else {
           res.locals.error = true;
@@ -35,6 +38,9 @@ const account = {
       linkedin: '',
       skills: '',
       picture: '',
+      street: '',
+      postalcode: '',
+      city: '',
       template: false,
       information: false,
       projects: false,

@@ -23,6 +23,7 @@ router.post('/login', account.login, function(req, res, next) {
 ----------------------------------------- */
 router.get('/register', function(req, res, next) {
   res.locals.error = false;
+  res.locals.user = false;
   res.render('account/register');
 });
 

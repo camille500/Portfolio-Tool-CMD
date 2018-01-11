@@ -1,0 +1,38 @@
+<%- include('../../partials/head.ejs') %>
+
+  <main class="__dashboard container-fluid">
+
+    <h1>Hi <%=user.firstname%></h1>
+
+    <h2>Project toevoegen</h2>
+      <p>Vul alle gegevens in om een nieuw project aan te maken.</p>
+      <form method="post">
+        <div class="form-group">
+          <label for="title">Titel*</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="Vul de titel van het project in" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Korte omschrijving*</label>
+          <textarea class="form-control" id="description" name="description" rows="4" placeholder="Schrijf een korte introductietekst"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fulldescription">Volledige omschrijving*</label>
+          <textarea class="form-control" id="fulldescription" name="fulldescription" rows="10" placeholder="Schrijf de volledige omschrijving"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="skills">Toegepaste skills*</label><br/>
+          <p class="subtext">Vul hier de skills in die je tijdens dit project hebt toegepast.</p>
+          <input type="text" data-role="tagsinput" name="skills" class="form-control" id="skills" required>
+        </div>
+        <div class="form-group">
+          <label for="picture">Foto*</label>
+          <p class="subtext">Upload hier een foto voor bij het project</p>
+          <input type="file" class="form-control-file" id="picture" name="picture">
+        </div>
+        <input type="submit" value="Verstuur" class="btn btn-primary" />
+      </form>
+
+  </main>
+
+<%- include('../../partials/foot.ejs') %>
+<script src="/js/plugins/bootstrap-tagsinput.js" type="text/javascript"></script>

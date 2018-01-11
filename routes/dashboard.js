@@ -30,9 +30,17 @@ router.get('/projects/overview', account.checkSession, portfolio.getProjects, fu
   res.render('dashboard/projects/overview');
 });
 
+router.get('/projects/add', account.checkSession, function(req, res, next) {
+  res.render('dashboard/projects/add');
+});
+
+router.post('/projects/add', account.checkSession, portfolio.saveProject, function(req, res, next) {
+  res.redirect('/dashboard/projects/overview');
+});
+
 /* RENDER THE PREVIEW PAGE
 ----------------------------------------- */
-router.get('/preview/:template', account.checkSession, function(req, res, next) {
+router.get('/preview/:template', account.checkSession, portfolio.getProjects, function(req, res, next) {
   res.render('preview/' + req.params.template + '/index');
 });
 
