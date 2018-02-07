@@ -1,7 +1,29 @@
 .__accountForm {
   max-width: 22.5em;
+  margin-top: 2em;
   .__manditory {
     color: $color-red;
+  }
+  input {
+    border: none;
+    border-radius: 0;
+    padding: .75em 1em;
+    width: 25em;
+    &::-webkit-input-placeholder {
+      color: darken($color-grey, 7.5%);
+      font-weight: 500;
+    }
+  }
+}
+
+.btn-orange {
+  border-radius: 0;
+  background-color: $color-orange;
+  border-color: $color-orange;
+  font-weight: 700;
+  &:hover {
+    background-color: darken($color-orange, 5%);
+    border-color: darken($color-orange, 5%);
   }
 }
 
@@ -11,6 +33,6 @@
   }
   .subtext {
     font-size: .85em;
-    color: grey;
+    color: $title-color;
   }
 }

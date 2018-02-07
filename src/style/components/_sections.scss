@@ -1,5 +1,45 @@
 .__homepage {
-
+  .__left {
+    position: relative;
+    padding: 0;
+    background-color: $color-orange;
+    height: 100vh;
+    .__title_holder {
+      position: absolute;
+      text-align: left;
+      top: 50%;
+      left: 35%;
+      transform: translate(-35%, -50%);
+      h1 {
+        display: inline-grid;
+        padding: .25em;
+        color: white;
+        background-color: black;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.35em;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .__right {
+    position: relative;
+    padding: 0;
+    background-color: $color-grey;
+    // height: 100vh;
+    .__form_wrapper {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translate(-35%, -50%);
+      h2 {
+        font-size: 1.55em;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        color: black;
+      }
+    }
+  }
 }
 
 .__login {

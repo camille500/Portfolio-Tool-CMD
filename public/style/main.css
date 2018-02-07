@@ -1,7 +1,7 @@
 /* MAIN SCSS FILE, LOAD ALL NEEDED FILES FOR COMPILING
 ----------------------------------------- */
 body {
-  background-color: #e7e7e7;
+  background-color: #e9e9e9;
   font-family: 'Open Sans', sans-serif; }
 
 .mbtm {
@@ -9,6 +9,42 @@ body {
 
 .btn_projects {
   margin-top: 1.5em; }
+
+.__homepage .__left {
+  position: relative;
+  padding: 0;
+  background-color: #fea201;
+  height: 100vh; }
+  .__homepage .__left .__title_holder {
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    left: 35%;
+    transform: translate(-35%, -50%); }
+    .__homepage .__left .__title_holder h1 {
+      display: inline-grid;
+      padding: .25em;
+      color: white;
+      background-color: black;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2.35em;
+      font-weight: 700;
+      text-transform: uppercase; }
+
+.__homepage .__right {
+  position: relative;
+  padding: 0;
+  background-color: #e9e9e9; }
+  .__homepage .__right .__form_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-35%, -50%); }
+    .__homepage .__right .__form_wrapper h2 {
+      font-size: 1.55em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      color: black; }
 
 .__login .__errorMessage {
   max-width: 40em; }
@@ -33,16 +69,34 @@ body {
     max-width: 100%; }
 
 .__accountForm {
-  max-width: 22.5em; }
+  max-width: 22.5em;
+  margin-top: 2em; }
   .__accountForm .__manditory {
     color: #e74c3c; }
+  .__accountForm input {
+    border: none;
+    border-radius: 0;
+    padding: .75em 1em;
+    width: 25em; }
+    .__accountForm input::-webkit-input-placeholder {
+      color: #d6d6d6;
+      font-weight: 500; }
+
+.btn-orange {
+  border-radius: 0;
+  background-color: #fea201;
+  border-color: #fea201;
+  font-weight: 700; }
+  .btn-orange:hover {
+    background-color: #e59201;
+    border-color: #e59201; }
 
 .__dashboard label {
   font-weight: 700; }
 
 .__dashboard .subtext {
   font-size: .85em;
-  color: grey; }
+  color: #4a4a4a; }
 
 .__dashboard p {
   margin-bottom: .55em; }
