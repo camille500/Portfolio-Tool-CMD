@@ -27,7 +27,7 @@ body {
       color: white;
       background-color: black;
       font-family: 'Open Sans', sans-serif;
-      font-size: 2.35em;
+      font-size: 2em;
       font-weight: 700;
       text-transform: uppercase; }
 
@@ -69,10 +69,14 @@ body {
     max-width: 100%; }
 
 .__accountForm {
-  max-width: 22.5em;
+  max-width: 40em;
   margin-top: 2em; }
   .__accountForm .__manditory {
     color: #e74c3c; }
+  .__accountForm button {
+    float: right; }
+    .__accountForm button:hover {
+      cursor: pointer; }
   .__accountForm input {
     border: none;
     border-radius: 0;

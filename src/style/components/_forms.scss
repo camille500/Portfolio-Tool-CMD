@@ -1,8 +1,14 @@
 .__accountForm {
-  max-width: 22.5em;
+  max-width: 40em;
   margin-top: 2em;
   .__manditory {
     color: $color-red;
+  }
+  button {
+    float: right;
+    &:hover {
+      cursor: pointer;
+    }
   }
   input {
     border: none;
